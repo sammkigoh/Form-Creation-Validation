@@ -39,17 +39,15 @@ document. addEventListener('DOMContentLoaded', function(){
             isValid= false;
             messages.push ('Password must be at least 6 characters long.');
         }
-        //feedback disply logic
+        //feedback display logic
+        feedbackDiv.style.display = 'block';
 
         if (isValid) {
-            feedbackDiv.innerHTML = '<p style="color:#28a745;">Registration successful!</p>';
+            feedbackDiv.textContent = 'Registration successful!';
+            feedbackDiv.style.color = '#28a745';
         } else {
-            feedback.innerHTML = messages.map(msg => `<p style="color:#dc3545;">${msg}</p>`).join('');
+            feedback.innerHTML = messages.join ('br');
+            feedbackDiv.style.color = '#dc3545';
         }
-
     });
-
-
-
-
 });
