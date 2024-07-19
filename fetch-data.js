@@ -21,7 +21,7 @@ document.addEventListener ('DOMContentLoaded', function () {
 
             //converting the response to JSON
 
-            const users = await response.json ();
+            const users = await response.json();
 
             //catching the loading message
 
